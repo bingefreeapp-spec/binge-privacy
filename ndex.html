@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Binge Free</title>
+    
+    <!-- Google Fonts - Binge Brand Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========================================
+           BINGE BRAND DESIGN SYSTEM
+           ======================================== */
+        
+        :root {
+            /* Binge Brand Colors */
+            --primary: #8FBCB5;              /* Sage Green - Brand Color */
+            --primary-light: #C8DFDB;
+            --primary-dark: #6A9690;
+            --secondary: #F5A0C0;            /* Warm Pink */
+            --accent: #F5C850;               /* Golden Yellow */
+            --success: #3DAA6D;              /* Fresh Green */
+            
+            /* Neutral Palette (Warm) */
+            --bg-base: #FBF7F0;              /* Warm cream */
+            --bg-elevated: #FFFCF7;          /* Warm white */
+            --bg-sunken: #F5F0E6;            /* Deeper cream */
+            
+            --text-primary: #2A2520;         /* Warm almost-black */
+            --text-secondary: #5A554B;       /* Warm dark gray */
+            --text-muted: #8A857B;           /* Warm mid gray */
+            --text-brand: #8FBCB5;           /* Sage Green */
+            
+            --border-subtle: #F0EBE2;
+            --border-default: #E5E0D6;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(42, 37, 32, 0.08), 0 2px 6px rgba(42, 37, 32, 0.05);
+            --shadow-md: 0 2px 4px rgba(42, 37, 32, 0.08), 0 6px 16px rgba(42, 37, 32, 0.06);
+            --shadow-lg: 0 4px 8px rgba(42, 37, 32, 0.08), 0 12px 32px rgba(42, 37, 32, 0.08);
+            
+            /* Typography */
+            --font-heading: 'Libre Baskerville', serif;
+            --font-body: 'Manrope', sans-serif;
+            
+            /* Spacing */
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-base);
+            padding: 0;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--bg-elevated);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 48px;
+        }
+        
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            font-size: 1.125rem;
+            opacity: 0.95;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+        
+        .last-updated {
+            color: rgba(255, 252, 247, 0.8);
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-top: 16px;
+        }
+        
+        /* Typography */
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            color: var(--bg-elevated);
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin: 48px 0 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--primary-light);
+            line-height: 1.3;
+        }
+        
+        h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin: 32px 0 16px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin: 16px 0;
+            color: var(--text-primary);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        /* Lists */
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+            list-style: none;
+        }
+        
+        ul li {
+            position: relative;
+            margin: 12px 0;
+            padding-left: 24px;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        strong {
+            color: var(--text-secondary);
+            font-weight: 700;
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        a:hover {
+            border-bottom-color: var(--primary);
+            opacity: 0.8;
+        }
+        
+        /* Contact Box */
+        .contact {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-elevated) 100%);
+            border: 2px solid var(--primary-light);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            margin: 48px 0 32px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact h2 {
+            margin-top: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        /* Divider */
+        hr {
+            margin: 48px 0;
+            border: none;
+            border-top: 2px solid var(--border-default);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 32px 0;
+        }
+        
+        /* Accent Box for Important Info */
+        .important-box {
+            background: linear-gradient(135deg, #FEF3E2 0%, var(--bg-elevated) 100%);
+            border-left: 4px solid var(--accent);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            h1 {
+                font-size: 1.875rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+                margin: 36px 0 16px;
+            }
+            
+            h3 {
+                font-size: 1.125rem;
+            }
+            
+            .container {
+                padding: 24px 16px;
+            }
+            
+            .contact {
+                padding: 24px 20px;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .header {
+                background: none;
+                color: black;
+                box-shadow: none;
+            }
+            
+            h1 {
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Binge Free</div>
+        <div class="subtitle">Política de Privacidad</div>
+        <p class="last-updated">Última actualización: 12 de diciembre de 2025</p>
+    </div>
+    
+    <div class="container">
+        <h2>1. Introducción</h2>
+        <p>La entidad jurídica identificada como Binge Free (en adelante, "el Responsable del Tratamiento", "nosotros", "nuestro" o "la Plataforma") manifiesta su compromiso inequívoco con la salvaguarda de la privacidad y la protección de los datos personales de carácter identificable. El presente instrumento normativo establece el marco regulatorio mediante el cual se estructuran los procedimientos de recopilación, procesamiento, almacenamiento, transferencia y eventual eliminación de información personal susceptible de identificación cuando el usuario (en adelante, "el Interesado", "usted" o "su") accede, interactúa o hace uso de nuestra aplicación móvil de entrenamiento cognitivo asistido por sistemas de inteligencia artificial generativa.</p>
+        
+        <h2>2. Información que Recopilamos</h2>
+        
+        <h3>2.1 Información de Cuenta</h3>
+        <ul>
+            <li><strong>Datos de Autenticación mediante OAuth 2.0:</strong> En virtud de la implementación del protocolo de autorización OAuth 2.0 de Google, se procede a la obtención y almacenamiento temporal de atributos identificativos del perfil del Usuario, incluyendo pero no limitándose a: denominación personal completa, dirección de correo electrónico verificada por el proveedor de identidad federado, y representación gráfica del perfil de usuario (avatar) conforme sea proporcionada por el sistema de gestión de identidades de Google LLC.</li>
+            <li><strong>Identificador Único Inmutable:</strong> El sistema genera de manera automática e irreversible un identificador alfanumérico único (UUID v4) que se establece como clave primaria de referencia inequívoca para la entidad de usuario dentro de nuestro ecosistema de base de datos relacional.</li>
+        </ul>
+        
+        <h3>2.2 Información de Uso</h3>
+        <ul>
+            <li><strong>Registros de Interacción Conversacional:</strong> Se procede al almacenamiento persistente del historial completo de intercambios comunicativos entre el Interesado y el motor de procesamiento de lenguaje natural basado en arquitecturas transformadoras, con el propósito de mantener la coherencia contextual y garantizar la continuidad semántica en las sesiones subsecuentes de entrenamiento cognitivo.</li>
+            <li><strong>Procesamiento Efímero de Señales Acústicas:</strong> En aquellos casos donde el Usuario opte por emplear las funcionalidades de entrada mediante voz, se ejecuta un procesamiento temporal y no persistente de las señales de audio digitalizadas, las cuales son sometidas a algoritmos de conversión automática de voz a texto (ASR). Dichas señales acústicas son eliminadas de manera irrevocable del sistema una vez completado el proceso de transcripción lingüística, no manteniéndose copia alguna en nuestros repositorios de almacenamiento.</li>
+            <li><strong>Métricas de Progreso y Analítica Comportamental:</strong> Se registran indicadores cuantitativos y cualitativos relativos al avance del Usuario en sus objetivos autodeclarados, así como patrones de utilización de las diferentes funcionalidades de la Plataforma, con fines de personalización algorítmica de la experiencia de usuario.</li>
+            <li><strong>Configuraciones de Preferencia:</strong> Se mantienen registros de las configuraciones parametrizables establecidas por el Usuario, incluyendo sin limitación: preferencias lingüísticas, configuración de notificaciones push, esquemas cromáticos de interfaz, y demás ajustes de personalización de la experiencia de usuario.</li>
+        </ul>
+        
+        <h3>2.3 Información de Transacciones Comerciales</h3>
+        <ul>
+            <li><strong>Procesamiento de Transacciones Mediante Intermediario:</strong> La totalidad de las transacciones monetarias ejecutadas dentro del ecosistema de la Plataforma son procesadas, gestionadas y liquidadas por Google Play Billing Services, actuando como procesador de pagos tercero. El Responsable del Tratamiento recibe exclusivamente notificaciones de estado relativas a la suscripción activa del Usuario, sin acceso directo a instrumentos de pago, información de tarjetas de crédito, datos bancarios o cualquier otra información financiera sensible.</li>
+            <li><strong>Estado de Membresía Premium:</strong> Se mantiene un registro del tipo de plan de suscripción adquirido (periodicidad mensual o anual), así como el estado operativo de dicha suscripción (activa, suspendida, cancelada, en período de gracia), con el fin exclusivo de gestionar el acceso diferenciado a funcionalidades premium de la Plataforma.</li>
+        </ul>
+        
+        <h3>2.4 Información Técnica y Telemetría</h3>
+        <ul>
+            <li><strong>Metadatos del Dispositivo:</strong> Se recopilan especificaciones técnicas del hardware empleado, incluyendo modelo del dispositivo, versión del sistema operativo Android, configuración de localización regional, preferencias lingüísticas del sistema, y otras características técnicas necesarias para la correcta provisión del servicio.</li>
+            <li><strong>Registros de Eventos de Error (Error Logs):</strong> En caso de fallos críticos o excepciones no controladas durante la ejecución de la aplicación, se generan y transmiten registros técnicos detallados (stack traces) que contienen información diagnóstica relevante para la identificación, análisis y corrección de errores de software, mejorando así la estabilidad y confiabilidad del sistema.</li>
+        </ul>
+        
+        <h2>3. Base Jurídica y Finalidades del Tratamiento de Datos</h2>
+        
+        <h3>3.1 Ejecución del Contrato y Provisión del Servicio</h3>
+        <ul>
+            <li>Verificación y autenticación de la identidad digital del Usuario mediante protocolos criptográficos de terceros confiables</li>
+            <li>Administración y mantenimiento de la cuenta de usuario dentro del sistema de gestión de identidades de la Plataforma</li>
+            <li>Generación de respuestas contextualizadas mediante modelos de lenguaje de gran escala (LLM), fundamentadas en el análisis histórico de patrones conversacionales del Interesado</li>
+            <li>Transformación automática de señales acústicas en representaciones textuales procesables mediante sistemas ASR (Automatic Speech Recognition)</li>
+            <li>Sincronización bidireccional de datos entre múltiples dispositivos asociados a la misma cuenta de usuario</li>
+            <li>Control de acceso basado en roles (RBAC) para la gestión diferenciada de funcionalidades según el tier de suscripción activo</li>
+        </ul>
+        
+        <h3>3.2 Interés Legítimo: Optimización y Mejora Continua del Servicio</h3>
+        <ul>
+            <li>Análisis estadístico agregado de patrones de comportamiento de usuario para la identificación de oportunidades de mejora en la arquitectura de la Plataforma</li>
+            <li>Implementación de sistemas de detección, diagnóstico y resolución proactiva de anomalías técnicas</li>
+            <li>Investigación y desarrollo de nuevas capacidades funcionales orientadas a satisfacer necesidades emergentes identificadas mediante análisis de uso</li>
+        </ul>
+        
+        <h3>3.3 Comunicaciones del Servicio y Marketing Directo</h3>
+        <ul>
+            <li>Transmisión de notificaciones push relativas a métricas de progreso y recordatorios contextuales (sujeto a consentimiento explícito previo del Usuario)</li>
+            <li>Comunicación de modificaciones sustanciales en los términos de servicio, políticas de privacidad o estructura de precios</li>
+            <li>Provisión de respuestas a consultas de soporte técnico o atención al cliente iniciadas por el Interesado</li>
+        </ul>
+        
+        <h2>4. Cesión, Transferencia y Compartición de Datos con Terceros</h2>
+        
+        <h3>4.1 Encargados del Tratamiento (Data Processors)</h3>
+        <p>En virtud de acuerdos de procesamiento de datos debidamente formalizados, se establecen relaciones contractuales con las siguientes entidades terceras que actúan como encargados del tratamiento, sometidos a estrictas obligaciones de confidencialidad y seguridad:</p>
+        <ul>
+            <li><strong>OpenAI, LP (Proveedor de Infraestructura de IA):</strong> Los datos conversacionales del Usuario son transmitidos y procesados mediante la interfaz de programación de aplicaciones (API) de OpenAI con el objeto de generar respuestas contextualizadas del asistente virtual. El procesamiento efectuado por OpenAI se rige por su propia <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Política de Privacidad</a> y términos contractuales aplicables, sobre los cuales el Usuario declara estar informado.</li>
+            <li><strong>Google Cloud Platform (Infraestructura OAuth y Speech-to-Text):</strong> Se emplean servicios de Google LLC para la gestión de autenticación federada (OAuth 2.0) y para la conversión automatizada de voz a texto mediante algoritmos de reconocimiento automático del habla (ASR).</li>
+            <li><strong>Supabase, Inc. (Infraestructura de Base de Datos como Servicio):</strong> Este encargado proporciona servicios de almacenamiento persistente en bases de datos relacionales para la información de cuentas de usuario, registros conversacionales históricos y configuraciones de preferencias, implementando medidas de seguridad técnicas y organizativas conformes al estado del arte.</li>
+            <li><strong>Google Play Billing Services (Procesador de Pagos):</strong> Gestiona de manera integral todas las transacciones de suscripción, actuando como agente de procesamiento de pagos, sin que el Responsable tenga acceso directo a información financiera sensible.</li>
+        </ul>
+        
+        <h3>4.2 Divulgación por Imperativo Legal</h3>
+        <p>El Responsable del Tratamiento se reserva el derecho de divulgar información personal del Interesado en aquellos supuestos en los que exista una obligación legal ineludible o cuando, actuando de buena fe y con arreglo a criterios razonables, se estime necesario para:</p>
+        <ul>
+            <li>Dar cumplimiento a obligaciones legales, requerimientos judiciales, órdenes de autoridades competentes o procesos legalmente válidos</li>
+            <li>Proteger y defender los derechos, la propiedad intelectual o los intereses legítimos del Responsable</li>
+            <li>Prevenir, investigar o tomar medidas respecto de actividades ilícitas, sospechosas o que constituyan violaciones de los Términos de Servicio</li>
+            <li>Proteger la seguridad personal, la integridad física o los derechos fundamentales de los usuarios o del público general contra amenazas inminentes</li>
+        </ul>
+        
+        <h3>4.3 Prohibición de Comercialización de Datos</h3>
+        <div class="important-box">
+            <p><strong>El Responsable del Tratamiento establece de manera categórica e inequívoca que no procede, bajo ninguna circunstancia, a la venta, arrendamiento, cesión onerosa o compartición de información personal identificable con entidades terceras con fines de marketing directo, elaboración de perfiles comerciales, o cualquier otra forma de explotación comercial de datos personales.</strong></p>
+        </div>
+        
+        <h2>5. Medidas de Seguridad Técnicas y Organizativas</h2>
+        <p>El Responsable del Tratamiento ha implementado un conjunto integral de medidas de seguridad de naturaleza técnica y organizativa, diseñadas conforme al estado del arte y proporcionales al riesgo inherente al tratamiento de datos personales, con el objeto de garantizar un nivel de seguridad adecuado:</p>
+        <ul>
+            <li>Cifrado end-to-end de datos en tránsito mediante protocolos criptográficos TLS 1.3 y certificados X.509</li>
+            <li>Cifrado de datos en reposo (data at rest) mediante algoritmos de cifrado simétrico AES-256 en infraestructura de almacenamiento persistente</li>
+            <li>Autenticación multifactor y gestión de identidades mediante OAuth 2.0 con tokens JWT firmados criptográficamente</li>
+            <li>Implementación de controles de acceso basados en principios de mínimo privilegio y necesidad de conocer (need-to-know basis)</li>
+            <li>Auditorías de seguridad periódicas, incluyendo pruebas de penetración y evaluaciones de vulnerabilidades</li>
+            <li>Sistemas de respaldo automático y redundancia geográfica para garantizar la disponibilidad y prevenir la pérdida de datos</li>
+            <li>Procedimientos de respuesta a incidentes de seguridad y notificación de brechas conforme a normativa aplicable</li>
+        </ul>
+        
+        <h2>6. Retención de Datos</h2>
+        <ul>
+            <li><strong>Datos de cuenta:</strong> Se conservan mientras su cuenta esté activa</li>
+            <li><strong>Conversaciones:</strong> Se conservan indefinidamente para proporcionar continuidad, a menos que las elimine manualmente</li>
+            <li><strong>Audio procesado:</strong> Se elimina inmediatamente después de la conversión a texto</li>
+            <li><strong>Registros técnicos:</strong> Se conservan por 90 días para diagnóstico</li>
+        </ul>
+        <p>Puede solicitar la eliminación de su cuenta y todos los datos asociados en cualquier momento.</p>
+        
+        <h2>7. Sus Derechos</h2>
+        <p>Dependiendo de su ubicación, puede tener los siguientes derechos:</p>
+        <ul>
+            <li><strong>Acceso:</strong> Solicitar una copia de sus datos personales</li>
+            <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos</li>
+            <li><strong>Eliminación:</strong> Solicitar la eliminación de su cuenta y datos</li>
+            <li><strong>Portabilidad:</strong> Recibir sus datos en formato estructurado y legible</li>
+            <li><strong>Oposición:</strong> Objetar ciertos procesamientos de sus datos</li>
+            <li><strong>Restricción:</strong> Solicitar la limitación del procesamiento</li>
+        </ul>
+        <p>Para ejercer estos derechos, contáctenos a través de la información proporcionada en la sección de Contacto.</p>
+        
+        <h2>8. Privacidad de Menores</h2>
+        <p>Nuestra aplicación está dirigida a usuarios mayores de 16 años. No recopilamos intencionalmente información personal de menores de 16 años. Si descubrimos que hemos recopilado datos de un menor sin consentimiento parental, eliminaremos esa información inmediatamente.</p>
+        
+        <h2>9. Transferencias Internacionales</h2>
+        <p>Sus datos pueden ser transferidos y procesados en servidores ubicados fuera de su país de residencia. Estos países pueden tener leyes de protección de datos diferentes. Tomamos medidas para asegurar que sus datos reciban un nivel adecuado de protección dondequiera que se procesen.</p>
+        
+        <h2>10. Cookies y Tecnologías Similares</h2>
+        <p>La aplicación móvil no utiliza cookies. Sin embargo, usamos:</p>
+        <ul>
+            <li><strong>Almacenamiento local:</strong> Para guardar preferencias y tokens de sesión en su dispositivo</li>
+            <li><strong>Identificadores de sesión:</strong> Para mantener su sesión activa mientras usa la app</li>
+        </ul>
+        
+        <h2>11. Cambios a esta Política</h2>
+        <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Le notificaremos sobre cambios significativos mediante:</p>
+        <ul>
+            <li>Una notificación dentro de la aplicación</li>
+            <li>Actualización de la fecha de "Última actualización" al principio de esta política</li>
+            <li>Un correo electrónico a su dirección registrada (para cambios materiales)</li>
+        </ul>
+        <p>Le recomendamos revisar esta política periódicamente.</p>
+        
+        <h2>12. Cumplimiento Legal</h2>
+        <p>Esta aplicación cumple con:</p>
+        <ul>
+            <li><strong>GDPR</strong> (Reglamento General de Protección de Datos de la UE)</li>
+            <li><strong>CCPA</strong> (Ley de Privacidad del Consumidor de California)</li>
+            <li><strong>COPPA</strong> (Ley de Protección de la Privacidad Infantil en Línea)</li>
+            <li>Políticas de Google Play Store</li>
+        </ul>
+        
+        <div class="contact">
+            <h2>13. Contacto</h2>
+            <p>Si tiene preguntas, inquietudes o solicitudes relacionadas con esta Política de Privacidad o el manejo de sus datos personales, puede contactarnos en:</p>
+            <ul>
+                <li><strong>Correo electrónico:</strong> <a href="mailto:privacidad@bingefree.app">privacidad@bingefree.app</a></li>
+                <li><strong>Soporte en la app:</strong> Desde la sección "Ayuda" o "Contacto" dentro de la aplicación</li>
+            </ul>
+            <p>Responderemos a su solicitud dentro de 30 días.</p>
+        </div>
+        
+        <hr>
+        
+        <div class="footer">
+            <p>© 2025 Binge Free. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>
