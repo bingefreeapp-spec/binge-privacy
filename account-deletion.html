@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Cuenta - Binge Free</title>
+    
+    <!-- Google Fonts - Binge Brand Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Binge Brand Design System */
+        :root {
+            --primary: #8FBCB5;
+            --primary-light: #C8DFDB;
+            --primary-dark: #6A9690;
+            --secondary: #F5A0C0;
+            --accent: #F5C850;
+            --bg-base: #FBF7F0;
+            --bg-elevated: #FFFCF7;
+            --text-primary: #2A2520;
+            --text-secondary: #5A554B;
+            --text-muted: #8A857B;
+            --border-default: #E5E0D6;
+            --font-heading: 'Libre Baskerville', serif;
+            --font-body: 'Manrope', sans-serif;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --shadow-md: 0 2px 4px rgba(42, 37, 32, 0.08), 0 6px 16px rgba(42, 37, 32, 0.06);
+            --shadow-lg: 0 4px 8px rgba(42, 37, 32, 0.08), 0 12px 32px rgba(42, 37, 32, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-base);
+            padding: 0;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--bg-elevated);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 48px;
+        }
+        
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            font-size: 1.125rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            color: var(--bg-elevated);
+            margin: 0;
+        }
+        
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin: 48px 0 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--primary-light);
+        }
+        
+        h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin: 32px 0 16px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin: 16px 0;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        
+        .step {
+            background: var(--bg-elevated);
+            border: 2px solid var(--primary-light);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin: 24px 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .step-text {
+            flex: 1;
+        }
+        
+        .step-title {
+            font-family: var(--font-heading);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        
+        .data-box {
+            background: linear-gradient(135deg, #FEF3E2 0%, var(--bg-elevated) 100%);
+            border-left: 4px solid var(--accent);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .data-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 16px 0;
+        }
+        
+        .data-list li {
+            position: relative;
+            margin: 12px 0;
+            padding-left: 28px;
+            line-height: 1.6;
+        }
+        
+        .data-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #FFE8E8 0%, var(--bg-elevated) 100%);
+            border-left: 4px solid #FF6B6B;
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-elevated) 100%);
+            border: 2px solid var(--primary-light);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            margin: 48px 0;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+        
+        .email-link {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin: 16px 0;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .email-link:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 32px 0;
+            margin-top: 48px;
+            border-top: 2px solid var(--border-default);
+        }
+        
+        strong {
+            color: var(--text-secondary);
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            h1 {
+                font-size: 1.875rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .container {
+                padding: 24px 16px;
+            }
+            
+            .step {
+                padding: 20px;
+            }
+            
+            .step-content {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-bottom: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Binge Free</div>
+        <div class="subtitle">Eliminación de Cuenta y Datos</div>
+    </div>
+    
+    <div class="container">
+        <h2>Cómo Eliminar tu Cuenta de Binge Free</h2>
+        
+        <p>En Binge Free respetamos tu derecho a controlar tus datos personales. Si deseas eliminar tu cuenta y todos los datos asociados, sigue estos pasos:</p>
+        
+        <div class="step">
+            <div class="step-content">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <div class="step-title">Abre la Aplicación</div>
+                    <p>Inicia sesión en tu cuenta de Binge Free en tu dispositivo móvil.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-content">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <div class="step-title">Ve a Configuración</div>
+                    <p>Toca el ícono de tu perfil en la esquina superior derecha y selecciona "Configuración".</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-content">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <div class="step-title">Selecciona "Cuenta"</div>
+                    <p>En el menú de configuración, busca y selecciona la opción "Cuenta".</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-content">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <div class="step-title">Eliminar Cuenta</div>
+                    <p>Desplázate hacia abajo y toca "Eliminar mi cuenta". Confirma tu decisión cuando se te solicite.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="warning-box">
+            <h3 style="margin-top: 0; color: #D63031;">⚠️ Esta acción es permanente e irreversible</h3>
+            <p>Una vez que elimines tu cuenta, no podrás recuperar tus datos. Asegúrate de descargar cualquier información que desees conservar antes de proceder.</p>
+        </div>
+        
+        <h2>Datos que Serán Eliminados</h2>
+        
+        <div class="data-box">
+            <h3 style="margin-top: 0;">Eliminación Inmediata (dentro de 30 días)</h3>
+            <ul class="data-list">
+                <li><strong>Información de perfil:</strong> Nombre, correo electrónico, foto de perfil</li>
+                <li><strong>Historial de conversaciones:</strong> Todos los mensajes con el coach de IA</li>
+                <li><strong>Datos de progreso:</strong> Rachas, estadísticas, registros diarios</li>
+                <li><strong>Configuraciones:</strong> Preferencias de la app, notificaciones</li>
+                <li><strong>Datos de autenticación:</strong> Tokens de sesión, credenciales vinculadas</li>
+            </ul>
+        </div>
+        
+        <h2>Datos que Se Conservan (Cumplimiento Legal)</h2>
+        
+        <div class="data-box" style="background: linear-gradient(135deg, #E8F5E9 0%, var(--bg-elevated) 100%); border-left-color: #4CAF50;">
+            <h3 style="margin-top: 0;">Retención Temporal (máximo 90 días)</h3>
+            <ul class="data-list">
+                <li><strong>Registros de transacciones:</strong> Historial de compras y suscripciones (requerido por políticas de reembolso de Google Play)</li>
+                <li><strong>Logs de seguridad:</strong> Registros técnicos de acceso para prevención de fraude</li>
+                <li><strong>Datos agregados anónimos:</strong> Estadísticas de uso sin identificación personal (para mejora del servicio)</li>
+            </ul>
+            <p style="margin-top: 16px; font-size: 0.9rem; color: var(--text-muted);">
+                <strong>Nota:</strong> Estos datos se eliminan automáticamente después del período de retención legal o se anonimizan de forma permanente.
+            </p>
+        </div>
+        
+        <h2>¿Necesitas Ayuda?</h2>
+        
+        <div class="contact-box">
+            <h3 style="margin-top: 0;">Contacta con Soporte</h3>
+            <p>Si tienes problemas para eliminar tu cuenta o necesitas asistencia, envíanos un correo:</p>
+            <a href="mailto:support@bingefree.app?subject=Solicitud%20de%20Eliminación%20de%20Cuenta" class="email-link">
+                📧 support@bingefree.app
+            </a>
+            <p style="margin-top: 16px; font-size: 0.9rem; color: var(--text-muted);">
+                Incluye tu dirección de correo electrónico registrada para agilizar el proceso. Responderemos en un plazo de 48 horas.
+            </p>
+        </div>
+        
+        <h2>Alternativas a la Eliminación</h2>
+        
+        <p>Si solo necesitas un descanso temporal, considera estas opciones:</p>
+        
+        <ul class="data-list" style="margin-left: 24px;">
+            <li><strong>Desactivar notificaciones:</strong> En Configuración > Notificaciones</li>
+            <li><strong>Cerrar sesión:</strong> Sal de la app sin eliminar tus datos</li>
+            <li><strong>Cancelar suscripción Premium:</strong> Mantén tu cuenta pero cancela los pagos</li>
+        </ul>
+        
+        <div class="footer">
+            <p>© 2025 Binge Free. Todos los derechos reservados.</p>
+            <p style="margin-top: 8px;">
+                <a href="index.html" style="color: var(--primary); text-decoration: none;">Política de Privacidad</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
